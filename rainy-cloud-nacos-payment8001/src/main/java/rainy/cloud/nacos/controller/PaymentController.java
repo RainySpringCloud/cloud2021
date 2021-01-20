@@ -1,7 +1,8 @@
 package rainy.cloud.nacos.controller;
 
-import com.oracle.tools.packager.Log;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,14 +17,19 @@ import javax.annotation.Resource;
 @Slf4j
 public class PaymentController {
 
+    private final static Logger log = LoggerFactory.getLogger(PaymentController.class);
+
     @Autowired
     private PaymentService paymentService;
 
     @PostMapping(value ="/payment/create")
     public CommonResult create(@RequestBody Payment payment){
 
+
+
         int result =paymentService.create(payment);
-        Log.info("success  " + result);
+        log.info("success  " + result);
+
 
         if(result>0){
             return new CommonResult(200,"success and good " ,result);
@@ -37,7 +43,7 @@ public class PaymentController {
     public CommonResult getPaymentById(@PathVariable("id") Long id){
 
         Payment payment = paymentService.getPayment(id);
-        Log.info("结果 " +payment);
+        log.info("结果 " +payment);
 
         if(payment!=null){
             return new CommonResult(200,"success and good " ,payment);

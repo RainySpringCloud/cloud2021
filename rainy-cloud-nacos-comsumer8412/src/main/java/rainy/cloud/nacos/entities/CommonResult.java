@@ -14,8 +14,9 @@ public class CommonResult<T> {
     private T data;
 
 
-    public CommonResult(Integer code, String message){
-        this(code,message,null);
+    public CommonResult(Integer code, String message)
+    {
+      this(code,message,null);
     }
 
     public CommonResult(Integer code, String message, T data) {
