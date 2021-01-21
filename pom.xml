@@ -11,6 +11,11 @@
         <module>rainy-cloud-nacos-payment8001</module>
         <module>rainy-cloud-nacos-comsumer8412</module>
         <module>cloud-api-commons</module>
+        <module>cloud-eureka-server7001</module>
+        <module>rainy-eureka-server7002</module>
+        <module>rainy-cloud-nacos-payment8002</module>
+        <module>rainy-cloud-nacos-payment8004</module>
+        <module>rainy-cloud-zookeeper-consumer6896</module>
     </modules>
     <packaging>pom</packaging>
 
