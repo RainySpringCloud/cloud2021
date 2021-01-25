@@ -1,0 +1,23 @@
+server:
+  port: 6891
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+
+spring:
+  application:
+    name: rainy-cloud-consumer-openfeign6891
+
+ribbon:
+  #建立连接所用时间
+  ReadTimeout: 5000
+  #建立连接后从服务器读取数据所用时间
+  ConnectTimeOut: 5000
+
+logging:
+  level:
+    rainy.springcloud.openfegin.service.PaymentFeignService:  debug
