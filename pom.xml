@@ -16,6 +16,7 @@
         <module>rainy-cloud-nacos-payment8002</module>
         <module>rainy-cloud-nacos-payment8004</module>
         <module>rainy-cloud-zookeeper-consumer6896</module>
+        <module>rainy-cloud-consumer-openfeign6891</module>
     </modules>
     <packaging>pom</packaging>
 

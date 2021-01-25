@@ -16,6 +16,7 @@ import rainy.cloud.nacos.service.PaymentService;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -82,6 +83,13 @@ public class PaymentController {
     public String getPaymentLb(){
 
         return  port;
+    }
+
+    @GetMapping("/payment/openfeign/timeout")
+    public String getPaymentTimeout() throws InterruptedException {
+
+        Thread.sleep(3000);
+        return port;
     }
 
 }
