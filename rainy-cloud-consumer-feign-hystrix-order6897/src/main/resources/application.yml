@@ -1,0 +1,30 @@
+server:
+  port: 6891
+
+spring:
+  application:
+    name: rainy-cloud-consumer-feign-hystrix-order6897
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+    serverMethod:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
